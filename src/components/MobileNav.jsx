@@ -18,8 +18,8 @@ setMenu({ isPaneOpen: true });
   return (
     <>
       <div className="text-white">
-        <button onClick={openMenu}>
-          <RxHamburgerMenu size={24} />
+        <button className="font-extrabold" onClick={openMenu}>
+          <RxHamburgerMenu size={28} />
         </button>
       </div>
       <SlidingPane
@@ -29,7 +29,9 @@ setMenu({ isPaneOpen: true });
         hideHeader
         onRequestClose={closeMenu}
       >
-        <button onClick={closeMenu}><GrClose size={18} /></button>
+        <button onClick={closeMenu}>
+          <GrClose size={18} />
+        </button>
         <div className="text-center">
           <ul className="text-lg font-bold mt-5">
             <li onClick={closeMenu}>

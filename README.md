@@ -2,7 +2,7 @@
 
 #### Project Summary
 
-In this project, I implemented a design made by a Twitter user using the TMdb API. I added a few functionalities as well. You can reach out to me if you feel with can transform the project to another level.
+In this project, I implemented a design made by a Twitter user using TMdb API. I added a few functionalities as well. You can reach out to me if you feel we can transform this project to another level.
 
 #### Live Server
 [https://flickspot.vercel.app]
