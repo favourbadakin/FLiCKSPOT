@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiOutlineTwitter, AiFillYoutube, AiFillFacebook } from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,14 +9,14 @@ const Footer = () => {
         <div className="flex items-center justify-between border-y py-3 border-white/40">
           <div>
             <h2 className="md:text-lg hover:text-[#00425A] font-bold text-[#146C94]">
-              <a href="/#">FLiCKSPOT</a>
+              <Link to="/">FLiCKSPOT</Link>
             </h2>
           </div>
           <ul className="sm:flex items-center gap-x-4 hidden">
             <li>
-              <a href="/#" className="hover:text-white/40 transition">
+              <Link to="/" className="hover:text-white/40 transition">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <a href="/#" className="hover:text-white/40 transition">

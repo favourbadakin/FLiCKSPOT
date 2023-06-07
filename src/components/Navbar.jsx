@@ -1,5 +1,6 @@
 import React from 'react'
 import MobileNav from './MobileNav';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -7,7 +8,9 @@ const Navbar = () => {
       <nav className="absolute top-0 flex justify-between w-full items-center z-10 md:text-lg px-3 my-3">
         <div>
           <h1 className="text-[#146C94] text-2xl font-bold cursor-pointer">
-            FLiCKSPOT
+            <Link to='/'>
+              <button>FLiCKSPOT</button>
+            </Link>
           </h1>
         </div>
         <ul className="md:flex text-white gap-x-4 hidden">
@@ -22,11 +25,13 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="hidden md:block">
-          <button className="bg-[#00425A] py-2 px-4 inline-block text-white font-bold gap-x-2 rounded-3xl hover:bg-[#146C94] transition">
-            Log In
-          </button>
+          <Link to="/login">
+            <button className="bg-[#00425A] py-2 px-4 inline-block text-white font-bold gap-x-2 rounded-3xl hover:bg-[#146C94] transition">
+              Log In
+            </button>
+          </Link>
         </div>
-        <div className='md:hidden'>
+        <div className="md:hidden">
           <MobileNav />
         </div>
       </nav>

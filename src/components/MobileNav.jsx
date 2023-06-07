@@ -3,6 +3,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { GrClose } from 'react-icons/gr';
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
+import { Link } from 'react-router-dom';
 
 const MobileNav = () => {
     const [menu, setMenu] = useState({
@@ -50,12 +51,14 @@ setMenu({ isPaneOpen: true });
               <a href="/#">Contact Us</a>
             </li>
           </ul>
-          <button
-            onClick={closeMenu}
-            className="bg-[#00425A] w-full mt-12 py-2 px-4 inline-block text-white font-bold gap-x-2 rounded-3xl hover:bg-[#146C94] transition"
-          >
-            Log In
-          </button>
+          <Link to='/login'>
+            <button
+              onClick={closeMenu}
+              className="bg-[#00425A] w-full mt-12 py-2 px-4 inline-block text-white font-bold gap-x-2 rounded-3xl hover:bg-[#146C94] transition"
+            >
+              Log In
+            </button>
+          </Link>
         </div>
         <br />
       </SlidingPane>

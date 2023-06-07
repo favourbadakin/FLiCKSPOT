@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import endpoint from "../Endpoints";
 import axios from "axios";
 import { RxDividerVertical } from "react-icons/rx";
+import { BsArrowDown, BsArrowUp } from "react-icons/bs";
 
 const ComingSoon = () => {
   const [movie, setMovie] = useState([]);
@@ -14,6 +15,14 @@ const ComingSoon = () => {
     });
   }, []);
   
+  const slider = useRef();
+  const slideUp = () => {
+    slider.current.scrollUp = slider.current.scrollTo(0, -800);
+    
+  };
+  const slideDown = () => {
+ slider.current.scrollUp = slider.current.scrollTo(0, 100);
+  }
   
   return (
     <>
@@ -84,11 +93,16 @@ const ComingSoon = () => {
               </p>
             </div>
           </div>
-          <div className="h-48 md:h-96 overflow-y-scroll scrollbar-hide">
+          <div
+            className="h-48 md:h-96 overflow-y-scroll scroll-smooth scrollbar-hide relative"
+            ref={slider}
+          >
+            <BsArrowUp onClick={slideUp} className="absolute" />
             {movie.map((mov) => (
               <div
                 className="flex items-center py-2 gap-x-4 text-[#146C94] border-[#00425A]/30 border-b font-bold"
                 key={mov?.id}
+                
               >
                 <a href="/#">
                   <img
@@ -146,6 +160,7 @@ const ComingSoon = () => {
                 </div>
               </div>
             ))}
+            <BsArrowDown onClick={slideDown} className="absolute top-[10rem]" />
           </div>
         </div>
       </div>

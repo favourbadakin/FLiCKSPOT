@@ -10,7 +10,7 @@ const Home = () => {
   
   return (
     <>
-      <Header url={endpoint.popular} />
+      <Header url={endpoint.nowPlaying} />
       <Row title="Popular Movies" url={endpoint.popular} />
       <Row title="Top Rated Movies" url={endpoint.topRated} />
       <ComingSoon />
