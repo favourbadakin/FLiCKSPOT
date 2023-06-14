@@ -44,7 +44,7 @@ const Charts1 = ({ url }) => {
                 <div>
                   <div className="bg-black/70 w-full absolute bottom-0 left-0 p-2 flex items-center justify-between">
                     <div className="text-xs">
-                      <h4 className="bold">{truncateString(movie?.title, 26)}</h4>
+                      <h4 className="font-bold">{truncateString(movie?.title, 26)}</h4>
                       <p>
                         {movie?.genre_ids[0] === 28
                           ? "Action"
